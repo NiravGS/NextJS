@@ -1,0 +1,218 @@
+.bd-grid {
+    max-width: 1024px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 1.5rem;
+    background-color: #070D1F;
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__logo {
+    color: #E6E7E9;
+}
+
+.header__toggle {
+    font-size: 1.5rem;
+    color: #E6E7E9;
+    cursor: pointer;
+}
+
+.nav__content {
+    height: 100%;
+    -ms-grid-rows: max-content 1fr max-content;
+    grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+    grid-template-rows: max-content 1fr max-content;
+    row-gap: 2rem;
+}
+
+.nav__close {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.3rem;
+    padding: .25rem;
+    background-color: #282B3A;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: .25rem;
+    margin-bottom: .8rem;
+    width: 56px;
+    height: 56px;
+    background-color: #3664F4;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: 46px;
+    }
+}
+
+.nav__name {
+    display: block;
+    color: #E6E7E9;
+}
+
+.nav__profesion {
+    font-size: 1rem;
+}
+
+.nav__menu {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.nav__item {
+    margin: 2.5rem 0;
+}
+
+.nav__link {
+    color: #E6E7E9;
+}
+
+.nav__social {
+    padding-top: .5rem;
+}
+
+.nav__social-icon {
+    font-size: 1.2rem;
+    color: #E6E7E9;
+    margin-right: 1rem;
+
+    &:hover {
+        color: #3664F4;
+    }
+}
+
+.show {
+    left: 0;
+}
+
+.active {
+    color: #3664F4;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: #070D1F;
+        color: #E6E7E9;
+        width: 100%;
+        height: 100vh;
+        padding: 1.5rem 0;
+        z-index: 100;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    z .header {
+        height: calc(3rem + 1rem);
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__toggle {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav__close {
+        display: none;
+    }
+
+    .nav__profesion {
+        display: none;
+    }
+
+    .nav__perfil {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .nav__img {
+        width: 32px;
+        height: 32px;
+        margin-right: .5rem;
+        margin-bottom: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        img {
+            width: 26px;
+        }
+    }
+
+    .nav__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .nav__item {
+        margin: 0 .25rem;
+    }
+
+    .nav__link {
+        padding: .5rem .8rem;
+        border-radius: .25rem;
+
+        &:hover {
+            background-color: #3664F4;
+        }
+    }
+
+    .active {
+        background-color: #3664F4;
+        color: #E6E7E9;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
